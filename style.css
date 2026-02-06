@@ -1,0 +1,212 @@
+/* RESET (kills all spacing bugs) */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* REMOVE ALL DEFAULT MARGINS */
+section, h1, p {
+  margin: 0;
+}
+
+/* Background */
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+/* FIRST SCREEN = ONE VIEWPORT */
+.first-screen {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: start;
+  padding-top: 12px 0;
+}
+
+/* Sections */
+.section {
+  width: 100%;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: center;
+  min-height: auto; 
+}
+.section + .section {
+  margin-top: 6px;   /* small, intentional gap */
+}
+
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 360px;
+  background: white;
+  padding: 18px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Lock */
+#lock {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+/* Text */
+h1 {
+  font-size: 20px;
+  color: #e63946;
+}
+
+.subtext {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Swipe Section */
+.swipe-container {
+  width: 100%;
+  max-width: 360px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  height: 180px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  cursor: grab;
+}
+
+.swipe-container:active {
+  cursor: grabbing;
+}
+
+.swipe-card {
+  min-height: 60px;
+  font-size: 15px;
+  color: #e63946;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hint {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+/* Final Section */
+.center {
+  justify-content: center;
+}
+
+#final img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 6px;
+}
+
+.final-text {
+  font-size: 14px;
+  color: #e63946;
+  margin-top: 6px;
+}
+
+/* Hidden */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+/* Floating Hearts */
+.hearts span {
+  position: fixed;
+  bottom: -20px;
+  font-size: 18px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+#final {
+  scroll-margin-top: 20px;
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 8px 12px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  h1, p {
+    margin: 6px 0;
+  }
+}
+.final-thought {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 20px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(255, 105, 135, 0.25);
+}
+
+.final-thought h2 {
+  font-size: 1.2rem;
+  color: #e75480;
+  margin-bottom: 6px;
+}
+
+.final-thought p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+@media (max-width: 600px) {
+  .final-thought {
+    padding: 16px;
+  }
+
+  .final-thought h2 {
+    font-size: 1.1rem;
+  }
+
+  .final-thought p {
+    font-size: 0.9rem;
+  }
+}
+
+

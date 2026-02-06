@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Hearts -->
+  <div class="hearts"></div>
+
+  <!-- FIRST SCREEN (Section 1 + 2 together) -->
+  <div class="first-screen">
+
+    <!-- Section 1 -->
+    <section class="section">
+      <div class="card">
+        <div id="lock">🔒</div>
+        <h1>A Special Message Awaits</h1>
+        <p class="subtext">Swipe to feel my heart 💌</p>
+        <button onclick="unlock()">Open My Heart</button>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section">
+      <div class="swipe-container hidden" id="swipeBox">
+        <div class="swipe-card" id="swipeText"></div>
+        <p class="hint" id="scrollHint">⬅ Swipe ➡</p>
+      </div>
+    </section>
+    <section class="section center">
+  <div class="card final-thought">
+    <h2>💖 One Last Thought</h2>
+    <p>
+      No matter where life takes us,<br>
+      this little page holds a piece of my heart 💕
+    </p>
+  </div>
+</section>
+<!-- Section 3 (Photo on scroll) -->
+  <section class="section center hidden" id="final">
+    <div class="card">
+      <img src="photo3.jpg" alt="Us ❤️" />
+      <p class="final-text">You’ll always be special to me 💖</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
